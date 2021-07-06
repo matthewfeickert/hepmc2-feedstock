@@ -31,13 +31,10 @@ test:
     - cd source/examples
     # example_UsingIterators
     - ${CXX} example_UsingIterators.cc -o example_UsingIterators -I${CONDA_PREFIX}/include -L${CONDA_PREFIX}/lib -lHepMC
-    - ./example_UsingIterators
     # example_EventSelection
     - ${CXX} example_EventSelection.cc -o example_EventSelection -I${CONDA_PREFIX}/include -L${CONDA_PREFIX}/lib -lHepMC
-    - ./example_EventSelection
     # example_BuildEventFromScratch
     - ${CXX} example_BuildEventFromScratch.cc -o example_BuildEventFromScratch -I${CONDA_PREFIX}/include -L${CONDA_PREFIX}/lib -lHepMC
-    - ./example_BuildEventFromScratch
 
 about:
   home: http://hepmc.web.cern.ch/hepmc/
