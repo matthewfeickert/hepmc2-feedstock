@@ -21,3 +21,4 @@ make test
 fi
 
 make install
+exit 0
