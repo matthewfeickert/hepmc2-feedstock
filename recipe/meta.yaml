@@ -15,7 +15,7 @@ source:
     - patches/HepMC-2.06.07-nodoc.patch
     - patches/HepMC-2.06.07-broken-tests.patch
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
