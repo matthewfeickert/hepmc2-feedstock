@@ -40,7 +40,7 @@ test:
 
 about:
   home: http://hepmc.web.cern.ch/hepmc/
-  license: LGPL-2.1
+  license: LGPL-2.1-or-later
   license_family: LGPL
   license_file: source/INSTALL
   summary: 'HepMC - a C++ Event Record for Monte Carlo Generators'
