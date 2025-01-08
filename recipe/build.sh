@@ -4,21 +4,19 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-mkdir -p build
-cd build
-
 cmake -LAH \
+    ${CMAKE_ARGS} \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=${PREFIX} \
     -Dmomentum:STRING=GEV -Dlength:STRING=MM \
-    ../source 
+    -S source \
+    -B build
 
-
-make -j${CPU_COUNT}
+cmake --build build --clean-first --parallel="${CPU_COUNT}"
 
 if [ "$(uname)" == "Linux" ]; then
 make test
 fi
 
-make install
+cmake --install build
 exit 0
